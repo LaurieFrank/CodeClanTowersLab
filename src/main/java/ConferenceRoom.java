@@ -23,4 +23,12 @@ public class ConferenceRoom {
     public int guestCount() {
         return this.conferenceGuests.size();
     }
+
+    public void addConferenceGuest(Guest guest) {
+        this.conferenceGuests.add(guest);
+    }
+
+    public void removeConferenceGuest(Guest guest) {
+        this.conferenceGuests.remove(guest);
+    }
 }

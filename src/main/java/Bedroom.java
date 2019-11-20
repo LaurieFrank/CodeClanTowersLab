@@ -29,4 +29,12 @@ public class Bedroom {
     public String checkType() {
         return this.type;
     }
+
+    public void addGuest(Guest guest) {
+        this.guests.add(guest);
+    }
+
+    public void removeGuest(Guest guest) {
+        this.guests.remove(guest);
+    }
 }

@@ -1,3 +1,4 @@
+import junit.framework.TestCase;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -27,7 +28,20 @@ public class ConferenceRoomTest {
     }
 
     @Test
-    public void countGuestsInRom(){
+    public void countGuestsInRoom(){
         assertEquals(0, conferenceRoom.guestCount());
+    }
+
+    @Test
+    public void checkAddGuest(){
+        conferenceRoom.addConferenceGuest(guest1);
+        TestCase.assertEquals(1, conferenceRoom.guestCount());
+    }
+
+    @Test
+    public void checkRemoveGuest(){
+        conferenceRoom.addConferenceGuest(guest1);
+        conferenceRoom.removeConferenceGuest(guest1);
+        TestCase.assertEquals(0, conferenceRoom.guestCount());
     }
 }
